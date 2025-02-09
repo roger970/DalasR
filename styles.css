@@ -1,0 +1,168 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tema Industrial */
+body {
+    background: linear-gradient(to top, #444, #2c2c2c); /* Gradiente de cinza escuro */
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Modificar a posição do logo e slogan */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d32f2f; /* Vermelho forte para o cabeçalho */
+    color: #fff;
+    padding: 10px 20px;
+    z-index: 10;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha ao canto esquerdo */
+}
+
+header .logo {
+    margin-right: 10px;
+    color: #110404;
+}
+
+header .slogan {
+    font-size: 25px;
+    font-style: italic;
+}
+
+/* Seção de Serviços */
+#servicos {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #fbc02d; /* Amarelo para dar destaque */
+}
+
+.servicos-lista {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.servico {
+    background: rgba(255, 69, 0, 0.8); /* Vermelho com transparência */
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    max-width: 350px;
+    padding: 15px;
+    text-align: center;
+}
+
+.servico img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.servico h3 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #fff;
+}
+
+.servico:hover {
+    transform: scale(1.05);
+}
+
+/* Botões */
+.botoes {
+    margin-top: 15px;
+}
+
+.botoes button {
+    background-color: #d32f2f; /* Vermelho para os botões */
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.botoes button:hover {
+    background-color: #b71c1c; /* Vermelho mais escuro quando o mouse passa por cima */
+}
+
+/* Botão WhatsApp - Personalizado */
+.whatsapp-btn {
+    background-color: #25d366; /* Cor verde para o WhatsApp */
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e; /* Cor verde mais escura quando o mouse passa por cima */
+}
+
+/* Descrição do Serviço */
+.descricao {
+    display: none;
+    background: none;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+    color: #fbc02d; /* Amarelo para texto da descrição */
+    text-align: left;
+}
+
+.descricao.ativa {
+    display: block;
+}
+
+/* Rodapé */
+footer {
+    background-color: #444; /* Cor de fundo do rodapé em cinza escuro */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .servicos-lista {
+        grid-template-columns: 1fr;
+    }
+
+    header .logo {
+        font-size: 2rem;
+    }
+}
+
+/* Para esconder a barra de rolagem em todos os navegadores (no caso, usando Webkit) */
+html, body {
+    overflow: hidden; /* Esconde a barra de rolagem */
+    height: 100%;
+}
+
+/* Esconde a barra de rolagem, mas ainda permite a rolagem */
+::-webkit-scrollbar {
+    display: none;  /* Esconde a barra de rolagem */
+}
+
+/* Isto é necessário para que o scroll ainda funcione quando o usuário rolar */
+body {
+    overflow: scroll; /* Permite que a rolagem funcione */
+}
